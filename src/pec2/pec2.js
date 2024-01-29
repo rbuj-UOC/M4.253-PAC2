@@ -56,17 +56,17 @@ Book.prototype.setGenre = function (newGenre) {
 export function dashboardCompany(company) {
     if (company == null || company === undefined || !(company instanceof Object))
         throw new Error("The value of company is invalid.");
-    let result = {};
+    const result = {};
     result["employeeRankByDepartment"] = [];
     result["rankByDepartment"] = [];
     for (const department of company["departments"]) {
-        let employeeRankByDepartment = {};
-        let rankByDepartment = {};
+        const employeeRankByDepartment = {};
+        const rankByDepartment = {};
         employeeRankByDepartment["departmentName"] = rankByDepartment["departmentName"] = department["name"];
         employeeRankByDepartment["rank"] = [];
         rankByDepartment["totalHoursWorked"] = 0;
         for (const employee of department["employees"]) {
-            let rank = {};
+            const rank = {};
             rank["fullName"] = employee["firstName"] + " " + employee["lastName"];
             rank["totalHoursWorked"] = 0;
             for (const project of employee["projects"])
@@ -146,14 +146,14 @@ export class WordsAnalyzer {
         const msg = "Order type not valid.";
         if (typeof orderType === 'string')
             switch (orderType) {
-                case 'ASC':
-                    this._words.sort((w1, w2) => (w1 > w2) ? 1 : (w1 < w2) ? -1 : 0);
-                    break;
-                case 'DESC':
-                    this._words.sort((w1, w2) => (w1 < w2) ? 1 : (w1 > w2) ? -1 : 0);
-                    break;
-                default:
-                    throw new Error(msg);
+            case 'ASC':
+                this._words.sort((w1, w2) => (w1 > w2) ? 1 : (w1 < w2) ? -1 : 0);
+                break;
+            case 'DESC':
+                this._words.sort((w1, w2) => (w1 < w2) ? 1 : (w1 > w2) ? -1 : 0);
+                break;
+            default:
+                throw new Error(msg);
             }
         else
             throw new Error(msg);
@@ -184,19 +184,19 @@ export class WordsAnalyzer {
         }
     }
     #countVowels(text) {
-        let filter = text.toLocaleLowerCase().match(/[aeiou]/gi);
+        const filter = text.toLocaleLowerCase().match(/[aeiou]/gi);
         return filter === null ? 0 : filter.length;
     }
     #countConsonants(text) {
-        let filter = text.toLowerCase().match(/[qwrtypsdfghjklzxcvbnm]/gi);
+        const filter = text.toLowerCase().match(/[qwrtypsdfghjklzxcvbnm]/gi);
         return filter === null ? 0 : filter.length;
     }
     #countNumbers(text) {
-        let filter = text.toLowerCase().match(/[\d]/gi);
+        const filter = text.toLowerCase().match(/[\d]/gi);
         return filter === null ? 0 : filter.length;
     }
     #countSymbols(text) {
-        let filter = text.toLowerCase().match(/[-.]/gi);
+        const filter = text.toLowerCase().match(/[-.]/gi);
         return filter === null ? 0 : filter.length;
     }
 }
