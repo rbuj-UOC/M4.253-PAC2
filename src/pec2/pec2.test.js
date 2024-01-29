@@ -19,7 +19,7 @@ describe("Ex1", () => {
     expect(searchNumber(matrix2, 20)).toBe(false);
   });
 
-  test('shoud return false if the matrix is empty', () => {
+  test('should return false if the matrix is empty', () => {
     expect(searchNumber([], 10)).toBe(false);
   });
 });
