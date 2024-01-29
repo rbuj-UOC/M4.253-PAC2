@@ -111,7 +111,7 @@ describe("Ex3", () => {
 
   test("'isGenre' method should return the expected boolean", () => {
     expect(book1.isGenre('Poetry')).toBe(true);
-    expect(book1.isGenre('Mistery')).toBe(false);
+    expect(book1.isGenre('Mystery')).toBe(false);
   });
 });
 
