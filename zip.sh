@@ -8,5 +8,5 @@ if [ -f ${fitxer} ]; then
 fi
 
 zip ${fitxer} -r .eslintrc.json .gitignore .vscode \
-  LICENSE README.md README_ca.md README_es.md \
+  LICENSE README.md PAC.md PEC.md \
   package.json src public

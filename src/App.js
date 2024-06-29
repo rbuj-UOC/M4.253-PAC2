@@ -1,3 +1,27 @@
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                    Edit <code>src/App.js</code> and save to reload.
+                </p>
+                <a
+                    className="App-link"
+                    href="https://reactjs.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Learn React
+                </a>
+            </header>
+        </div>
+    );
+}
+
 // --------------------------------------------------------------------------------
 // EXERCISE 1
 // --------------------------------------------------------------------------------
@@ -146,14 +170,14 @@ export class WordsAnalyzer {
         const msg = "Order type not valid.";
         if (typeof orderType === 'string')
             switch (orderType) {
-            case 'ASC':
-                this._words.sort((w1, w2) => (w1 > w2) ? 1 : (w1 < w2) ? -1 : 0);
-                break;
-            case 'DESC':
-                this._words.sort((w1, w2) => (w1 < w2) ? 1 : (w1 > w2) ? -1 : 0);
-                break;
-            default:
-                throw new Error(msg);
+                case 'ASC':
+                    this._words.sort((w1, w2) => (w1 > w2) ? 1 : (w1 < w2) ? -1 : 0);
+                    break;
+                case 'DESC':
+                    this._words.sort((w1, w2) => (w1 < w2) ? 1 : (w1 > w2) ? -1 : 0);
+                    break;
+                default:
+                    throw new Error(msg);
             }
         else
             throw new Error(msg);
@@ -200,3 +224,5 @@ export class WordsAnalyzer {
         return filter === null ? 0 : filter.length;
     }
 }
+
+export default App;

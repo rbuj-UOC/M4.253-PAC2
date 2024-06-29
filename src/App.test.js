@@ -1,4 +1,15 @@
-import { dashboardCompany, WordsAnalyzer, Book, searchNumber, Shape, Circle } from "./pec2";
+/*
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+*/
+
+import { dashboardCompany, WordsAnalyzer, Book, searchNumber, Shape, Circle } from "./App";
 import { matrix1, matrix2, company, wordList } from "./data";
 
 // --------------------------------------------------------------------------------
