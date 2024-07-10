@@ -9,13 +9,13 @@ test('renders learn react link', () => {
 });
 */
 
-import { dashboardCompany, WordsAnalyzer, Book, searchNumber, Shape, Circle } from "./App";
-import { matrix1, matrix2, company, wordList } from "./data";
+import { dashboardCompany, WordsAnalyzer, Book, searchNumber, Shape, Circle } from './App';
+import { matrix1, matrix2, company, wordList } from './data';
 
 // --------------------------------------------------------------------------------
 // EXERCISE 1
 // --------------------------------------------------------------------------------
-describe("Ex1", () => {
+describe('Ex1', () => {
   test('The number is in the matrix', () => {
     expect(searchNumber(matrix1, 20)).toBe(true);
     expect(searchNumber(matrix2, 229)).toBe(true);
@@ -24,7 +24,7 @@ describe("Ex1", () => {
     expect(searchNumber(matrix2, 160)).toBe(true);
     expect(searchNumber(matrix2, 110)).toBe(true);
   });
-  
+
   test('The number is not in the matrix', () => {
     expect(searchNumber(matrix1, 25)).toBe(false);
     expect(searchNumber(matrix2, 20)).toBe(false);
@@ -35,14 +35,12 @@ describe("Ex1", () => {
   });
 });
 
-
-
 // --------------------------------------------------------------------------------
 // EXERCISE 2
 // --------------------------------------------------------------------------------
-describe("Ex2", () => {
+describe('Ex2', () => {
   describe('Shape class', () => {
-    test("Shape class id defined", () => {
+    test('Shape class id defined', () => {
       expect(Shape).toBeDefined();
     });
 
@@ -63,7 +61,7 @@ describe("Ex2", () => {
   });
 
   describe('Circle class', () => {
-    test("Circle class id defined", () => {
+    test('Circle class id defined', () => {
       expect(Circle).toBeDefined();
     });
 
@@ -84,27 +82,25 @@ describe("Ex2", () => {
   });
 });
 
-
-
 // --------------------------------------------------------------------------------
 // EXERCISE 3
 // --------------------------------------------------------------------------------
-describe("Ex3", () => {
-  const book1= new Book('The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction');
-  
+describe('Ex3', () => {
+  const book1 = new Book('The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction');
+
   test("should have a 'getInfo' method on the prototype", () => {
     expect(Book.prototype.getInfo).toBeDefined();
-    expect(Object.getPrototypeOf(book1)).toHaveProperty("getInfo");
+    expect(Object.getPrototypeOf(book1)).toHaveProperty('getInfo');
   });
 
   test("should have a 'setGenre' method on the prototype", () => {
     expect(Book.prototype.setGenre).toBeDefined();
-    expect(Object.getPrototypeOf(book1)).toHaveProperty("setGenre");
+    expect(Object.getPrototypeOf(book1)).toHaveProperty('setGenre');
   });
 
   test("shouldn't have a 'isGenre' method on the prototype", () => {
     expect(Book.prototype.isGenre).not.toBeDefined();
-    expect(Object.getPrototypeOf(book1)).not.toHaveProperty("isGenre");
+    expect(Object.getPrototypeOf(book1)).not.toHaveProperty('isGenre');
   });
 
   test("'getInfo' method should return the expected object", () => {
@@ -126,80 +122,78 @@ describe("Ex3", () => {
   });
 });
 
-
-
 // --------------------------------------------------------------------------------
 // EXERCISE 4
 // --------------------------------------------------------------------------------
-describe("Ex4", () => {
-  test("'dashboardCompany' function should receive an object as a parameter", () => { 
-    expect(() => { dashboardCompany(company); }).not.toThrow();
-  });
-  
-  test("'dashboardCompany' function should throw an error if called without an object", () => {
-    expect(() => { dashboardCompany(); }).toThrowError("The value of company is invalid.");
-    expect(() => { dashboardCompany(null); }).toThrowError("The value of company is invalid.");
-    expect(() => { dashboardCompany(100); }).toThrowError("The value of company is invalid.");
+describe('Ex4', () => {
+  test("'dashboardCompany' function should receive an object as a parameter", () => {
+    expect(() => {
+      dashboardCompany(company);
+    }).not.toThrow();
   });
 
-  test("should return the expected object", () => {
+  test("'dashboardCompany' function should throw an error if called without an object", () => {
+    expect(() => {
+      dashboardCompany();
+    }).toThrowError('The value of company is invalid.');
+    expect(() => {
+      dashboardCompany(null);
+    }).toThrowError('The value of company is invalid.');
+    expect(() => {
+      dashboardCompany(100);
+    }).toThrowError('The value of company is invalid.');
+  });
+
+  test('should return the expected object', () => {
     const expectedResult = {
       employeeRankByDepartment: [
         {
-          departmentName: "Marketing",
+          departmentName: 'Marketing',
           rank: [
-            { fullName: "David Pérez", totalHoursWorked: 168 },
-            { fullName: "Abril Puig", totalHoursWorked: 157 },
-          ],
+            { fullName: 'David Pérez', totalHoursWorked: 168 },
+            { fullName: 'Abril Puig', totalHoursWorked: 157 }
+          ]
         },
         {
-          departmentName: "Software Development",
+          departmentName: 'Software Development',
           rank: [
-            { fullName: "Pol Ferrer", totalHoursWorked: 434 },
-            { fullName: "Maria Tobella", totalHoursWorked: 352 },
-            { fullName: "Pedro Medina", totalHoursWorked: 66 },
-          ],
+            { fullName: 'Pol Ferrer', totalHoursWorked: 434 },
+            { fullName: 'Maria Tobella', totalHoursWorked: 352 },
+            { fullName: 'Pedro Medina', totalHoursWorked: 66 }
+          ]
         }
       ],
       rankByDepartment: [
         { departmentName: 'Marketing', totalHoursWorked: 325 },
-        { departmentName: 'Software Development', totalHoursWorked: 852 },
-      ],
+        { departmentName: 'Software Development', totalHoursWorked: 852 }
+      ]
     };
 
     expect(dashboardCompany(company)).toEqual(expectedResult);
   });
 });
 
-
-
 // --------------------------------------------------------------------------------
 // EXERCISE 5
 // --------------------------------------------------------------------------------
-describe("Ex5", () => {
+describe('Ex5', () => {
   test("'WordsAnalyzer' class is defined", () => {
     expect(WordsAnalyzer).toBeDefined();
   });
 
   const correctWordList = [wordList[0], wordList[1], wordList[2], wordList[3], wordList[5], wordList[6]];
 
-  test.each(correctWordList)(
-    "should be a valid constructor",
-    (wordList) => {
-      const d = new WordsAnalyzer(wordList);
+  test.each(correctWordList)('should be a valid constructor', (wordList) => {
+    const d = new WordsAnalyzer(wordList);
 
-      expect(d).toBeInstanceOf(WordsAnalyzer);
-    }
-  );
+    expect(d).toBeInstanceOf(WordsAnalyzer);
+  });
 
-  test.each(correctWordList)(
-    "should have a public getter to 'words'",
-    (wordList) => {
-      const d = new WordsAnalyzer(wordList);
+  test.each(correctWordList)("should have a public getter to 'words'", (wordList) => {
+    const d = new WordsAnalyzer(wordList);
 
-      expect(d.words).toEqual(wordList.words);
-    }
-  );
+    expect(d.words).toEqual(wordList.words);
+  });
 
   test("should have a public getter to 'totalVowels', 'totalConsonants', 'totalNumbers' and 'totalSymbols'", () => {
     const d = new WordsAnalyzer(wordList[0]);
@@ -214,20 +208,28 @@ describe("Ex5", () => {
     const testWords = ['Apu Nahasapeemapetilon', 'Edna Krabappel'];
     const d = new WordsAnalyzer(wordList[0]);
 
-    expect(() => { d.words = null; }).toThrowError("The value of words is invalid.");
-    expect(() => { d.words = 100; }).toThrowError("The value of words is invalid.");
-    expect(() => { d.words = 'Bart Simpson'; }).toThrowError("The value of words is invalid.");
-    expect(() => { d.words = ['Montgomery Burns']; }).not.toThrowError("The value of words is invalid.");
+    expect(() => {
+      d.words = null;
+    }).toThrowError('The value of words is invalid.');
+    expect(() => {
+      d.words = 100;
+    }).toThrowError('The value of words is invalid.');
+    expect(() => {
+      d.words = 'Bart Simpson';
+    }).toThrowError('The value of words is invalid.');
+    expect(() => {
+      d.words = ['Montgomery Burns'];
+    }).not.toThrowError('The value of words is invalid.');
 
     d.words = testWords;
 
     expect(d.words).toEqual(testWords);
 
     expect(d.getTotals()).toEqual({
-      "consonants": 18,
-      "numbers": 0,
-      "symbols": 0,
-      "vowels": 16
+      consonants: 18,
+      numbers: 0,
+      symbols: 0,
+      vowels: 16
     });
   });
 
@@ -235,10 +237,10 @@ describe("Ex5", () => {
     const d = new WordsAnalyzer(wordList[0]);
 
     expect(d.getTotals()).toEqual({
-        "consonants": 37,
-        "numbers": 4,
-        "symbols": 5,
-        "vowels": 24
+      consonants: 37,
+      numbers: 4,
+      symbols: 5,
+      vowels: 24
     });
   });
 
@@ -253,68 +255,55 @@ describe("Ex5", () => {
   test("'orderWords' method", () => {
     const d = new WordsAnalyzer(wordList[0]);
 
-    expect(() => {d.orderWords('Ascendente') }).toThrowError('Order type not valid.');
-    expect(() => {d.orderWords(null) }).toThrowError('Order type not valid.');
-    
+    expect(() => {
+      d.orderWords('Ascendente');
+    }).toThrowError('Order type not valid.');
+    expect(() => {
+      d.orderWords(null);
+    }).toThrowError('Order type not valid.');
+
     d.orderWords('ASC');
 
-    expect(d.words).toEqual([
-      'Ahsoka',
-      'Anakin Skywalker',
-      'BB-8',
-      'C-3PO',
-      'Han Solo',
-      'Jira',
-      'Obi-Wan Kenobi',
-      'Qui-Gon Jinn',
-      'R2-D2'
-    ]);
+    expect(d.words).toEqual(['Ahsoka', 'Anakin Skywalker', 'BB-8', 'C-3PO', 'Han Solo', 'Jira', 'Obi-Wan Kenobi', 'Qui-Gon Jinn', 'R2-D2']);
 
     d.orderWords('DESC');
 
-    expect(d.words).toEqual([
-      'R2-D2',
-      'Qui-Gon Jinn',
-      'Obi-Wan Kenobi',
-      'Jira',
-      'Han Solo',
-      'C-3PO',
-      'BB-8',
-      'Anakin Skywalker',
-      'Ahsoka'
-    ]);
+    expect(d.words).toEqual(['R2-D2', 'Qui-Gon Jinn', 'Obi-Wan Kenobi', 'Jira', 'Han Solo', 'C-3PO', 'BB-8', 'Anakin Skywalker', 'Ahsoka']);
   });
 
   test("'deleteWord' method", () => {
     const d = new WordsAnalyzer(wordList[3]);
 
-    expect(() => { d.deleteWord(0); }).toThrowError("The value of number is invalid.");
-    expect(() => { d.deleteWord(5); }).toThrowError("The value of number is invalid.");
-    expect(() => { d.deleteWord(null); }).toThrowError("The value of number is invalid.");
-    expect(() => { d.deleteWord(''); }).toThrowError("The value of number is invalid.");
+    expect(() => {
+      d.deleteWord(0);
+    }).toThrowError('The value of number is invalid.');
+    expect(() => {
+      d.deleteWord(5);
+    }).toThrowError('The value of number is invalid.');
+    expect(() => {
+      d.deleteWord(null);
+    }).toThrowError('The value of number is invalid.');
+    expect(() => {
+      d.deleteWord('');
+    }).toThrowError('The value of number is invalid.');
 
     d.deleteWord(3);
 
-    expect(d.words).toEqual([
-      'Hanamichi Sakuragi',
-      'Takenori Akagi',
-      'Kaede Rukawa'
-    ]);
+    expect(d.words).toEqual(['Hanamichi Sakuragi', 'Takenori Akagi', 'Kaede Rukawa']);
 
     d.deleteWord(3);
 
-    expect(d.words).toEqual([
-      'Hanamichi Sakuragi',
-      'Takenori Akagi'
-    ]);
+    expect(d.words).toEqual(['Hanamichi Sakuragi', 'Takenori Akagi']);
 
-    expect(() => { d.deleteWord(3); }).toThrowError("The value of number is invalid.");
+    expect(() => {
+      d.deleteWord(3);
+    }).toThrowError('The value of number is invalid.');
 
     expect(d.getTotals()).toEqual({
-      "consonants": 15,
-      "numbers": 0,
-      "symbols": 0,
-      "vowels": 15
+      consonants: 15,
+      numbers: 0,
+      symbols: 0,
+      vowels: 15
     });
   });
 });
