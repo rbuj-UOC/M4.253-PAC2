@@ -6,14 +6,14 @@ En aquesta PAC es practica la programació JavaScript mitjançant exercicis conc
 
 En aquesta PAC es desenvolupen les següents competències del Màster:
 
-* Utilitzar de manera adequada el llenguatge JavaScript i fer-lo servir en el desenvolupament de llocs i aplicacions web, en funció de les necessitats del projecte.
+- Utilitzar de manera adequada el llenguatge JavaScript i fer-lo servir en el desenvolupament de llocs i aplicacions web, en funció de les necessitats del projecte.
 
 ## Objectius
 
 Els objectius concrets d'aquesta PAC són:
 
-* Aprendre a utilitzar JavaScript i les seves característiques bàsiques.
-* Contribuir a conèixer a fons el llenguatge JavaScript per poder fer-lo servir en el desenvolupament d'aplicacions Web.
+- Aprendre a utilitzar JavaScript i les seves característiques bàsiques.
+- Contribuir a conèixer a fons el llenguatge JavaScript per poder fer-lo servir en el desenvolupament d'aplicacions Web.
 
 ## Lliurament de la PAC
 
@@ -21,7 +21,7 @@ Un cop hagis realitzat les activitats pràctiques proposades en aquest enunciat,
 
 - Hauràs d'enviar els teus canvis a l'apartat de l'aula virtual de la UOC.
 - Hauràs d'enviar els teus canvis al repositori de GitHub Classroom.
- 
+
 Recorda que aquest repositori l'has clonat del repositori a GitHub. Quan treballis al teu sistema, tots els canvis els faràs als teus fitxers locals, els quals hauràs d'afegir i _comitejar_ al teu repositori Git. Aquests canvis estaran al teu sistema fins que facis _push_ i els enviïs al repositori a GitHub.
 
 Recorda que has de treballar a la branca _main_ o _master_ (la que es crei per defecte). Pots fer diversos enviaments.
@@ -40,8 +40,8 @@ Alguns detalls a tenir en compte:
 - Els tests automàtics estan dissenyats per detectar exercicis erronis o incomplets per a casos concrets. El fet que un test passi no garanteix que l'exercici estigui realitzat correctament, és a dir, que cobreixi tots els casos.
 - Un exercici els tests del qual no passen es puntuarà amb un 0 llevat que hi hagi problemes amb el test.
 - A més de passar els tests, el professorat avaluarà el vostre codi en base als següents criteris:
-   - Llegibilitat, senzillesa i qualitat del codi.
-   - Coneixements de programació. Per exemple, no utilitzar les estructures de control adequades, com ara utilitzar un bucle per construir una sentència condicional o viceversa.
+  - Llegibilitat, senzillesa i qualitat del codi.
+  - Coneixements de programació. Per exemple, no utilitzar les estructures de control adequades, com ara utilitzar un bucle per construir una sentència condicional o viceversa.
 
 ## Requisits mínims
 
@@ -79,7 +79,6 @@ Tal com t'indiquem a la PAC 1, la primera vegada que executis `npm t` i es llenc
 
 Si tens algun problema amb els tests, no dubtis a preguntar al fòrum "Dudas PEC 2 | Dubtes PAC 2" de l'aula.
 
-
 ### Exercici 1 (1 p)
 
 Implementa una funció `searchNumber` que rep 2 paràmetres:
@@ -99,7 +98,6 @@ Has de tenir en compte les consideracions següents:
 > **Nota:** Podeu consultar exemples de l'array `matrix` al fitxer `src/pec2/data.js`.
 
 > **Nota:** En la puntuació d'aquest exercici es prestarà una atenció especial a l'optimització de la solució presentada.
-
 
 ### Exercici 2 (1,5 p)
 
@@ -121,7 +119,6 @@ Aquesta classe ha d'incorporar els mètodes següents:
 - `calculateArea`: Implementació del mètode _abstracte_ de la classe `Shape`. Heu de tornar l'àrea del cercle en format de dos decimals.
 - `getName`: Mètode que ha de tornar el literal "I'm a circle named" seguit del valor de `name`, entre cometes simples.
 
-
 ### Exercici 3 (2 p)
 
 Aquest exercici està pensat per entendre que hi ha una altra manera de crear objectes. Aquesta forma es considera _legacy_ però és una tècnica que es segueix utilitzant i és important entendre que les classes són _syntax sugar_ d'aquesta tècnica. A més, aquest exercici us servirà per practicar i entendre els prototips i l'ús de `this` en JavaScript.
@@ -132,20 +129,19 @@ Realitza les tasques següents:
 - Implementa la funció `isGenre`. Aquest mètode ha de rebre un paràmetre `genre` i ha de tornar un valor booleà indicant si el paràmetre passat és igual a la propietat `genre` de `Book`.
 - Implementa la funció `getInfo` que retorni un objecte amb tota la informació d'un `Book`. Exemple:
 
-   ```js
-   {
-     Title: 'Fundation',
-     Autor: 'Isaac Asimov',
-     Gènere: 'Science fiction'
-   }
-   ```
+  ```js
+  {
+    Title: 'Foundation',
+    Autor: 'Isaac Asimov',
+    Gènere: 'Science fiction'
+  }
+  ```
 
 - Implementa la funció `setGenre` que rep el paràmetre `newGenre`. Aquest mètode serveix per canviar el valor de la propietat `genre` d'un `Book`.
 
 - Has de tenir en compte les consideracions següents:
-   - La funció `isGenre` s'ha d'implementar de manera que cada instància de `Book` tingui la seva còpia d'aquesta funció.
-   - Les funcions `getInfo` i `setGenre` s'han d'implementar de manera que **es comparteixin a través del prototype**.
-
+  - La funció `isGenre` s'ha d'implementar de manera que cada instància de `Book` tingui la seva còpia d'aquesta funció.
+  - Les funcions `getInfo` i `setGenre` s'han d'implementar de manera que **es comparteixin a través del prototype**.
 
 ### Exercici 4 (2,5 p)
 
@@ -188,32 +184,36 @@ Heu de verificar el paràmetre d'entrada `company` i en cas que aquest no sigui 
 
 > **Nota:** Pots consultar un exemple de l'objecte `company` que es rebria com a paràmetre al fitxer `src/pec2/data.js`.
 
-
 ### Exercici 5 (3 p)
 
 Implementa la classe `WordsAnalyzer`, que utilitzarem per fer una sèrie d'operacions sobre una llista d'strings.
 
 #### Constructor (0,6 p)
+
 El constructor de la classe `WordsAnalyzer` ha d'acceptar el paràmetre d'entrada `data` de tipus objecte.
 
 > **Nota:** Podeu consultar diversos exemples de l'estructura de l'objecte, continguts a l'array `wordList` del fitxer `src/pec2/data.js`.
 
 La classe ha de tenir les propietats següents (totes elles _protegides_):
-   - `words`: Array d'strings. Has de verificar el paràmetre d'entrada (`data`) i en cas que aquest no sigui correcte, llançar una instància nova d'un objecte de tipus `Error` amb el text "The list of words is invalid.".
-   - `totalVowels`: Ha de contenir el nombre total de _vocals_ a tota la llista de paraules.
-   - `totalConsonants`: Ha de contenir el nombre total de _consonants_ a tota la llista de paraules.
-   - `totalNumbers`: Ha de contenir el nombre total de _números_ en tota la llista de paraules.
-   - `totalSymbols`: Ha de contenir el nombre total de _símbols_ a tota la llista de paraules.
+
+- `words`: Array d'strings. Has de verificar el paràmetre d'entrada (`data`) i en cas que aquest no sigui correcte, llançar una instància nova d'un objecte de tipus `Error` amb el text "The list of words is invalid.".
+- `totalVowels`: Ha de contenir el nombre total de _vocals_ a tota la llista de paraules.
+- `totalConsonants`: Ha de contenir el nombre total de _consonants_ a tota la llista de paraules.
+- `totalNumbers`: Ha de contenir el nombre total de _números_ en tota la llista de paraules.
+- `totalSymbols`: Ha de contenir el nombre total de _símbols_ a tota la llista de paraules.
 
 > **Nota:** Recordeu que les propietats de l'objecte han de contenir, en tot moment, els valors que s'espera que tinguin.
 
 #### Getters (0,2 p)
+
 Heu d'implementar els _getters_ de cadascuna de les propietats de la classe `WordsAnalyzer`.
 
 #### Setter (0,6 p)
+
 Has d'implementar només el _setter_ de la propietat `words` de la classe `WordsAnalyzer`. Per fer-ho, has de verificar el paràmetre d'entrada i en cas que aquest no sigui correcte, llançar una instància nova d'un objecte de tipus `Error` amb el text "The value of words is invalid.".
 
 #### Mètodes públics
+
 Has d'implementar els mètodes públics següents:
 
 > **Nota:** No hi ha d'haver més mètodes públics que els indicats
@@ -222,14 +222,14 @@ Has d'implementar els mètodes públics següents:
 
 Retorna un objecte amb tots els totals seguint aquest format d'exemple:
 
-   ```js
-   {
-     "consonants": 31,
-     "numbers": 4,
-     "symbols": 6,
-     "vowels": 28
-   }
-   ```
+```js
+{
+  "consonants": 31,
+  "numbers": 4,
+  "symbols": 6,
+  "vowels": 28
+}
+```
 
 ##### textExists(textToSearch) (0,4 p)
 

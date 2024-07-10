@@ -1,27 +1,27 @@
 # PJP PEC 2
 
-En esta PEC se practica la programación JavaScript por medio de ejercicios concretos que evaluarán una o varias características del lenguaje. 
+En esta PEC se practica la programación JavaScript por medio de ejercicios concretos que evaluarán una o varias características del lenguaje.
 
 ## Competencias
 
 En esta PEC se desarrollan las siguientes competencias del Máster:
 
-* Utilizar de manera adecuada el lenguaje JavaScript y usarlo en el desarrollo de sitios y aplicaciones web, en función de las necesidades del proyecto.
+- Utilizar de manera adecuada el lenguaje JavaScript y usarlo en el desarrollo de sitios y aplicaciones web, en función de las necesidades del proyecto.
 
 ## Objetivos
 
 Los objetivos concretos de esta PEC son:
 
-* Aprender a utilizar JavaScript y sus características básicas.
-* Contribuir a conocer a fondo el lenguaje JavaScript para poder usarlo en el desarrollo de aplicaciones Web.
+- Aprender a utilizar JavaScript y sus características básicas.
+- Contribuir a conocer a fondo el lenguaje JavaScript para poder usarlo en el desarrollo de aplicaciones Web.
 
-## Entrega de la PEC 
+## Entrega de la PEC
 
 Una vez hayas realizado las actividades prácticas propuestas en este enunciado, **la entrega se realizará de forma doble**:
 
 - Deberás enviar tus cambios al apartado del aula virtual de la UOC.
 - Deberás enviar tus cambios al repositorio de GitHub Classroom.
- 
+
 Recuerda que este repositorio lo has clonado del repositorio en GitHub. Cuando trabajes en tu sistema, todos los cambios los harás en tus ficheros locales, los cuales tendrás que añadir y _comitear_ a tu repositorio Git. Estos cambios estarán en tu sistema hasta que hagas _push_ y los envíes al repositorio en GitHub.
 
 Recuerda que debes trabajar en la rama _main_ o _master_ (la que se cree por defecto). Puedes hacer varios envíos.
@@ -30,9 +30,9 @@ En el aula virtual encontrarás una _checklist_ que te ayudará a repasar todos 
 
 ## Puntuación
 
-El hecho de trabajar con tests para verificar la funcionalidad del código os permitirá tener una idea de vuestra propia nota antes de la entrega. 
+El hecho de trabajar con tests para verificar la funcionalidad del código os permitirá tener una idea de vuestra propia nota antes de la entrega.
 
-La puntuación de los ejercicios prácticos se basa en dos criterios: **Funcionalidad** e **implementación**. Se espera que los ejercicios funcionen correctamente (pasen los tests) y que la implementación (el código) tenga una calidad adecuada. 
+La puntuación de los ejercicios prácticos se basa en dos criterios: **Funcionalidad** e **implementación**. Se espera que los ejercicios funcionen correctamente (pasen los tests) y que la implementación (el código) tenga una calidad adecuada.
 
 Algunos detalles a tener en cuenta:
 
@@ -41,7 +41,7 @@ Algunos detalles a tener en cuenta:
 - Un ejercicio cuyos tests no pasan se puntuará con un 0 salvo que existan problemas con el test.
 - Además de pasar los tests, el profesorado evaluará vuestro código en base a los siguientes criterios:
   - Legibilidad, sencillez y calidad del código.
-  - Conocimientos de programación. Por ejemplo, no utilizar las estructuras de control adecuadas, como utilizar un bucle para construir una sentencia condicional o viceversa.
+  - Conocimientos de programación. Por ejemplo, no utilizar las estructuras de control adecuadas, cómo utilizar un bucle para construir una sentencia condicional o viceversa.
 
 ## Requisitos mínimos
 
@@ -75,10 +75,9 @@ npm t
 
 La instrucción anterior lanzará los tests cada vez que guardes el fichero `src/pec2/pec2.js`, que es precisamente donde implementarás los ejercicios de esta PEC.
 
-Tal y como te indicamos en la PEC 1, la primera vez que ejecutes `npm t` y se lancen los tests, fallarán todos, ya que no hay ningún ejercicio implementado. Conforme vayas trabajando en los ejercicios y guardes el fichero, puede que algún test lance algún error. Revisa el mensaje de error que se imprime para conocer su formato y entender cómo se notifican los errores.
+Tal y cómo te indicamos en la PEC 1, la primera vez que ejecutes `npm t` y se lancen los tests, fallarán todos, ya que no hay ningún ejercicio implementado. Conforme vayas trabajando en los ejercicios y guardes el fichero, puede que algún test lance algún error. Revisa el mensaje de error que se imprime para conocer su formato y entender cómo se notifican los errores.
 
 Si tienes algún problema con los tests, no dudes en preguntar en el foro "Dudas PEC 2 | Dubtes PAC 2" del aula.
-
 
 ### Ejercicio 1 (1 p)
 
@@ -96,10 +95,9 @@ Debes tener en cuenta las siguientes consideraciones:
 - Se asume que `targetNumber` siempre será un número entero, por lo que no es necesario verificar su tipo.
 - La función debe devolver un valor booleano, indicando si se ha localizado `targetNumber` en `matrix`.
 
-> **Nota:** Puedes consultar ejemplos del array `matrix` en el fichero `src/pec2/data.js`. 
+> **Nota:** Puedes consultar ejemplos del array `matrix` en el fichero `src/pec2/data.js`.
 
 > **Nota:** En la puntuación de este ejercicio se prestará especial atención a la optimización de la solución presentada.
-
 
 ### Ejercicio 2 (1,5 p)
 
@@ -119,8 +117,7 @@ Implementa una clase `Circle` que extienda de la clase `Shape` y cuyo constructo
 Esta clase debe incorporar los siguientes métodos:
 
 - `calculateArea`: Implementación del método _abstracto_ de la clase `Shape`. Debe devolver el àrea del círculo en formato de dos decimales.
-- `getName`: Método que debe delvolver el literal "I'm a circle named " seguido del valor de `name`, entre comillas simples.
-
+- `getName`: Método que debe devolver el literal "I'm a circle named " seguido del valor de `name`, entre comillas simples.
 
 ### Ejercicio 3 (2 p)
 
@@ -134,7 +131,7 @@ Realiza las siguientes tareas:
 
   ```js
   {
-    Title: 'Fundation',
+    Title: 'Foundation',
     Author: 'Isaac Asimov',
     Genre: 'Science fiction'
   }
@@ -146,10 +143,9 @@ Realiza las siguientes tareas:
   - La función `isGenre` debe implementarse de manera que cada instancia de `Book` tenga su propia copia de esta función.
   - Las funciones `getInfo` y `setGenre` deben implementarse de manera que **se compartan a través del prototype**.
 
-
 ### Ejercicio 4 (2,5 p)
 
-Implementa una función `dashboardCompany`, que reciba como parámetro un objeto `company` y que devuelva otro objeto que contenga la siguiente información:
+Implementa una función `dashboardCompany`, que reciba cómo parámetro un objeto `company` y que devuelva otro objeto que contenga la siguiente información:
 
 - Empleados ordenados por nombre de departamento (de manera ascendente) y por número de horas trabajadas en total (de manera descendente).
 - Número de horas totales trabajadas por departamento, ordenado por nombre de departamento (de manera ascendente).
@@ -186,34 +182,38 @@ Debes verificar el parámetro de entrada `company` y en caso de que éste no sea
 };
 ```
 
-> **Nota:** Puedes consultar un ejemplo del objeto `company` que se recibiría como parámetro en el fichero `src/pec2/data.js`. 
-
+> **Nota:** Puedes consultar un ejemplo del objeto `company` que se recibiría cómo parámetro en el fichero `src/pec2/data.js`.
 
 ### Ejercicio 5 (3 p)
 
 Implementa la clase `WordsAnalyzer`, que utilizaremos para realizar una serie de operaciones sobre una lista de strings.
 
 #### Constructor (0,6 p)
+
 El constructor de la clase `WordsAnalyzer` debe aceptar el parámetro de entrada `data` de tipo objeto.
 
-> **Nota:** Puedes consultar varios ejemplos de la estructura del objeto, contenidos en el array `wordList` del fichero `src/pec2/data.js`. 
+> **Nota:** Puedes consultar varios ejemplos de la estructura del objeto, contenidos en el array `wordList` del fichero `src/pec2/data.js`.
 
 La clase ha de tener las siguientes propiedades (todas ellas _protegidas_):
-  - `words`: Array de strings. Debes verificar el parámetro de entrada (`data`) y en caso de que éste no sea correcto, lanzar una nueva instancia de un objeto de tipo `Error` con el texto "The list of words is invalid.".
-  - `totalVowels`: Ha de contener el número total de _vocales_ en toda la lista de palabras.
-  - `totalConsonants`: Ha de contener el número total de _consonantes_ en toda la lista de palabras.
-  - `totalNumbers`: Ha de contener el número total de _números_ en toda la lista de palabras.
-  - `totalSymbols`: Ha de contener el número total de _símbolos_ en toda la lista de palabras.
+
+- `words`: Array de strings. Debes verificar el parámetro de entrada (`data`) y en caso de que éste no sea correcto, lanzar una nueva instancia de un objeto de tipo `Error` con el texto "The list of words is invalid.".
+- `totalVowels`: Ha de contener el número total de _vocales_ en toda la lista de palabras.
+- `totalConsonants`: Ha de contener el número total de _consonantes_ en toda la lista de palabras.
+- `totalNumbers`: Ha de contener el número total de _números_ en toda la lista de palabras.
+- `totalSymbols`: Ha de contener el número total de _símbolos_ en toda la lista de palabras.
 
 > **Nota:** Recuerda que las propiedades del objeto deben contener, en todo momento, los valores que se espera que tengan.
 
 #### Getters (0,2 p)
+
 Debes implementar los _getters_ de cada una de las propiedades de la clase `WordsAnalyzer`.
 
 #### Setter (0,6 p)
+
 Debes implementar únicamente el _setter_ de la propiedad `words` de la clase `WordsAnalyzer`. Para ello, debes verificar el parámetro de entrada y en caso de que éste no sea correcto, lanzar una nueva instancia de un objeto de tipo `Error` con el texto "The value of words is invalid.".
 
 #### Métodos públicos
+
 Debes implementar los siguientes métodos públicos:
 
 > **Nota:** No deben existir más métodos públicos que los indicados
@@ -222,14 +222,14 @@ Debes implementar los siguientes métodos públicos:
 
 Devuelve un objeto con todos los totales siguiendo este formato de ejemplo:
 
-  ```js
-  {
-    "consonants": 31,
-    "numbers": 4,
-    "symbols": 6,
-    "vowels": 28
-  }
-  ```
+```js
+{
+  "consonants": 31,
+  "numbers": 4,
+  "symbols": 6,
+  "vowels": 28
+}
+```
 
 ##### textExists(textToSearch) (0,4 p)
 
