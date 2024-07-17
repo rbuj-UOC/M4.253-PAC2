@@ -1,11 +1,9 @@
 {
-    "editor.tabSize": 4,
-    "editor.insertSpaces": true,
-    "editor.detectIndentation": false,
-    "cSpell.language": "en,ca,es",
-    "emmet.triggerExpansionOnTab": true,
-    "jest.runMode": {
-        "type": "on-save",
-        "runAllTestsOnStartup": true
-    }
+  "cSpell.language": "en,ca,es",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "emmet.triggerExpansionOnTab": true,
+  "jest.runMode": {
+    "type": "on-save",
+    "runAllTestsOnStartup": true
+  }
 }
