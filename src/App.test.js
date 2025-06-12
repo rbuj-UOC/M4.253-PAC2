@@ -51,7 +51,7 @@ describe('Ex2', () => {
 
     test('should throw an error when calling calculateArea', () => {
       const shape = new Shape('shape 1');
-      expect(() => shape.calculateArea()).toThrowError("The 'calculateArea' function must be implemented in child classes.");
+      expect(() => shape.calculateArea()).toThrow("The 'calculateArea' function must be implemented in child classes.");
     });
 
     test('should return the name when calling getName', () => {
@@ -135,13 +135,13 @@ describe('Ex4', () => {
   test("'dashboardCompany' function should throw an error if called without an object", () => {
     expect(() => {
       dashboardCompany();
-    }).toThrowError('The value of company is invalid.');
+    }).toThrow('The value of company is invalid.');
     expect(() => {
       dashboardCompany(null);
-    }).toThrowError('The value of company is invalid.');
+    }).toThrow('The value of company is invalid.');
     expect(() => {
       dashboardCompany(100);
-    }).toThrowError('The value of company is invalid.');
+    }).toThrow('The value of company is invalid.');
   });
 
   test('should return the expected object', () => {
@@ -210,16 +210,16 @@ describe('Ex5', () => {
 
     expect(() => {
       d.words = null;
-    }).toThrowError('The value of words is invalid.');
+    }).toThrow('The value of words is invalid.');
     expect(() => {
       d.words = 100;
-    }).toThrowError('The value of words is invalid.');
+    }).toThrow('The value of words is invalid.');
     expect(() => {
       d.words = 'Bart Simpson';
-    }).toThrowError('The value of words is invalid.');
+    }).toThrow('The value of words is invalid.');
     expect(() => {
       d.words = ['Montgomery Burns'];
-    }).not.toThrowError('The value of words is invalid.');
+    }).not.toThrow('The value of words is invalid.');
 
     d.words = testWords;
 
@@ -257,10 +257,10 @@ describe('Ex5', () => {
 
     expect(() => {
       d.orderWords('Ascendente');
-    }).toThrowError('Order type not valid.');
+    }).toThrow('Order type not valid.');
     expect(() => {
       d.orderWords(null);
-    }).toThrowError('Order type not valid.');
+    }).toThrow('Order type not valid.');
 
     d.orderWords('ASC');
 
@@ -276,16 +276,16 @@ describe('Ex5', () => {
 
     expect(() => {
       d.deleteWord(0);
-    }).toThrowError('The value of number is invalid.');
+    }).toThrow('The value of number is invalid.');
     expect(() => {
       d.deleteWord(5);
-    }).toThrowError('The value of number is invalid.');
+    }).toThrow('The value of number is invalid.');
     expect(() => {
       d.deleteWord(null);
-    }).toThrowError('The value of number is invalid.');
+    }).toThrow('The value of number is invalid.');
     expect(() => {
       d.deleteWord('');
-    }).toThrowError('The value of number is invalid.');
+    }).toThrow('The value of number is invalid.');
 
     d.deleteWord(3);
 
@@ -297,7 +297,7 @@ describe('Ex5', () => {
 
     expect(() => {
       d.deleteWord(3);
-    }).toThrowError('The value of number is invalid.');
+    }).toThrow('The value of number is invalid.');
 
     expect(d.getTotals()).toEqual({
       consonants: 15,
